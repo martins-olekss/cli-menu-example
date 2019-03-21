@@ -2,12 +2,17 @@
 
 use PhpSchool\CliMenu\CliMenu;
 use PhpSchool\CliMenu\Builder\CliMenuBuilder;
+use PhpSchool\CliMenu\MenuStyle;
 
 require_once(__DIR__ . '/vendor/autoload.php');
 require_once 'Database.php';
 
-$inputCallable = function (CliMenu $menu) {
-    $result = $menu->askText()
+$style = (new MenuStyle())
+    ->setBg('234')
+    ->setFg('122');
+
+$inputCallable = function (CliMenu $menu) use ($style) {
+    $result = $menu->askText($style)
         ->setPlaceholderText('Enter message')
         ->ask();
     $db = new Database();
@@ -46,6 +51,8 @@ $lastMessageCallable = function (CliMenu $menu) {
 $menu = (new CliMenuBuilder)
     ->setForegroundColour('238')
     ->setBackgroundColour('195')
+    ->setWidth(40)
+    ->setBorder(2, 2, 2, 2, '238')
     ->setTitle('Basic CLI Menu')
     ->setItemExtra('!!!')
     ->addItem('Enter message', $inputCallable)
