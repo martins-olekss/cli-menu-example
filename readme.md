@@ -1,12 +1,14 @@
-# PHP CLI menu with SQLite
+# PHP CLI menu example with SQLite
 
-Simple ( a bit janky ) example of PHP CLI menu with database
+Simple example of PHP CLI menu with database
 
-![Screenshot](php-cli-menu.PNG "Screenshot")
+![Screenshot](screenshot.PNG "Screenshot")
 
-Uses
+## Example uses
 - php-school/cli-menu
 - PDO SQLITE
 
-TODO
-- fix that awful input field color
+## Installing & usage
+- `composer install` to install dependencies
+- Make sure application has permissions to create DB file
+- Execute `php cli.php`

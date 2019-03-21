@@ -6,7 +6,7 @@ class Database
 
     public function __construct()
     {
-        $this->connection = new PDO('sqlite:messaging.sqlite3');
+        $this->connection = new PDO('sqlite:cli.sqlite3');
         $this->connection->setAttribute(PDO::ATTR_ERRMODE,
             PDO::ERRMODE_EXCEPTION);
     }
