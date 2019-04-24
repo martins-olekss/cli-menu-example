@@ -12,3 +12,5 @@ Simple example of PHP CLI menu with database
 - `composer install` to install dependencies
 - Make sure application has permissions to create DB file
 - Execute `php cli.php`
+
+<c> mo
